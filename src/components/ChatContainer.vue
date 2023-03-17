@@ -4,7 +4,7 @@
       <MessageItem :message="message" />
     </div>
     <div class="flex mt-4">
-      <ChatInput />
+      <ChatInput @send-message="sendMessage" />
     </div>
   </div>
 </template>
@@ -13,8 +13,9 @@
   import MessageItem from './MessageItem.vue';
   import ChatInput from './ChatInput.vue';
   import { Message } from '../types/index';
+  import { ref } from 'vue';
 
-  const messages = [
+  const messages = ref<Message[]>([
     {
       body: 'Hello!',
       sender: 'Alice',
@@ -25,7 +26,12 @@
       sender: 'Bob',
       timestamp: new Date(),
     },
-  ] as Message[];
+  ]);
+
+  const sendMessage = (message: Message) => {
+    console.log(message);
+    messages.value.push(message);
+  };
 </script>
 
 <style scoped>
