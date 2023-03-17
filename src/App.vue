@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import ChatContainer from './components/ChatContainer.vue';
+  import ChatModule from './components/chat/ChatModule.vue';
   import Menu from './components/Menu.vue';
 </script>
 
@@ -10,7 +10,7 @@
     </div>
     <div class="w-3/4">
       <div class="flex justify-end pr-8">
-        <ChatContainer />
+        <ChatModule />
       </div>
     </div>
   </div>

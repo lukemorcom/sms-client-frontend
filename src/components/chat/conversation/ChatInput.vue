@@ -5,8 +5,8 @@
     </div>
 </template>
 <script setup lang="ts">
-    import { defineEmits, ref } from 'vue';
-    import { Message } from '../types/index';
+    import { ref } from 'vue';
+    import { Message } from '../../types/index';
 
     const emit = defineEmits(['send-message'])
     const message = ref('');
