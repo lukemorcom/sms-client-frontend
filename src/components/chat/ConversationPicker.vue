@@ -12,8 +12,7 @@
     </div>
 </template>
 <script setup lang="ts">
-    import { defineProps } from 'vue';
-    import { Conversation } from '../../types/index';
+    import { Conversation } from '@/types/index';
 
     const emit = defineEmits(['set-active-conversation']);
 

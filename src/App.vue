@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import ChatModule from './components/chat/ChatModule.vue';
-  import Menu from './components/Menu.vue';
+  import ChatModule from '@/components/chat/ChatModule.vue';
+  import Menu from '@/components/Menu.vue';
 </script>
 
 <template>

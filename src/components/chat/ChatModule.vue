@@ -1,6 +1,3 @@
-
-import ChatContainer from './conversation/ChatContainer.vue';
-
 <template>
     <div class="flex">
         <div class="w-1/4">
@@ -16,10 +13,10 @@ import ChatContainer from './conversation/ChatContainer.vue';
     </div>
 </template>
 <script setup lang="ts">
-import ChatContainer from './conversation/ChatContainer.vue';
+import ChatContainer from '@/components/chat/conversation/ChatContainer.vue';
 import { computed, ref } from '@vue/reactivity';
-import ConversationPicker from './ConversationPicker.vue';
-import { Conversation } from '../../types';
+import ConversationPicker from '@/components/chat/ConversationPicker.vue';
+import { Conversation } from '@/types/index';
 
 const availableConversations = computed(() => {
     return [
@@ -75,6 +72,5 @@ const activeConversation = ref<Conversation>(availableConversations.value[0]);
 
 const setActiveConversation = (conversation: Conversation) => {
     activeConversation.value = conversation;
-    console.log(conversation)
 };
 </script>

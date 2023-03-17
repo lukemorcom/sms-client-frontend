@@ -10,9 +10,9 @@
 </template>
 
 <script setup lang="ts">
-  import MessageItem from './MessageItem.vue';
-  import ChatInput from './ChatInput.vue';
-  import { Message, Conversation } from '../../../types/index';
+  import MessageItem from '@/components/chat/conversation/MessageItem.vue';
+  import ChatInput from '@/components/chat/conversation/ChatInput.vue';
+  import { Message, Conversation } from '@/types/index';
 
   const props = defineProps<{
     activeConversation: Conversation;
