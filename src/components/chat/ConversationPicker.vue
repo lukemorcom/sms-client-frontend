@@ -4,6 +4,7 @@
             <li
                 v-for="(conversation, key) in props.availableConversations" :key="key"
                 :class="{ active: props.activeConversation.id === conversation.id }"
+                class="m-1"
                 @click="setActiveConversation(conversation)"
             >
                 {{ conversation.id }}
@@ -33,7 +34,7 @@
     background-color: #c9c9c9;
   }
   .active {
-    background-color: #000000;
+    background-color: #332a2a;
     color: #ffffff;
   }
 </style>
