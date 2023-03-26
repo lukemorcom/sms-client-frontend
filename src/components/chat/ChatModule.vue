@@ -17,6 +17,19 @@ import ChatContainer from '@/components/chat/conversation/ChatContainer.vue';
 import { computed, ref } from '@vue/reactivity';
 import ConversationPicker from '@/components/chat/ConversationPicker.vue';
 import { Conversation } from '@/types/index';
+import Pusher from 'pusher-js';
+
+const { VITE_PUSHER_APP_ID, VITE_PUSHER_APP_KEY, VITE_PUSHER_APP_SECRET, VITE_PUSHER_APP_CLUSTER } =
+    import.meta.env;
+
+const pusher = new Pusher(VITE_PUSHER_APP_KEY, {
+    cluster: VITE_PUSHER_APP_CLUSTER,
+});
+
+const channel = pusher.subscribe('sms-channel');
+channel.bind('message-received', (data: any) => {
+    console.log(data);
+});
 
 const availableConversations = computed(() => {
     return [

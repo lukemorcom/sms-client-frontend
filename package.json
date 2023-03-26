@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pusher-js": "^8.0.2",
     "vue": "^3.2.47"
   },
   "devDependencies": {
